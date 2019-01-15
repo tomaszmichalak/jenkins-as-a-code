@@ -18,5 +18,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[dougclub-jenkins::master]
-      - recipe[dougclub-jenkins::plugins]
+      - recipe[acme-jenkins::master]
+      - recipe[acme-jenkins::plugins]

@@ -1,7 +1,6 @@
 name              'acme-jenkins'
 maintainer_email  'tomek.michalak@gmail.com'
-license           'All Rights Reserved'
-version           '0.2.4'
+version           '0.0.1'
 
 depends           'java'
 depends           'jenkins', '~> 6.2.0'

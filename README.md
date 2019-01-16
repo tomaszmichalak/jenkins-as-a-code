@@ -1,4 +1,8 @@
-# Jenkins setup with Chef
+# Jenkins setup & configuration with Chef & JCasC
+
+<p align="center">
+  <img src="https://github.com/tomaszmichalak/jenkins-as-a-code/blob/master/assets/jenkins-dashboard.png?raw=true" alt="Jenkins dashboard"/>
+</p>
 
 This is a wrapper cookbook for the [Jenkins Chef cookbook](https://github.com/chef-cookbooks/jenkins).
 
@@ -31,6 +35,5 @@ $> tail -f /var/log/jenkins/jenkins.log
 Jan 16, 2019 7:45:54 AM hudson.WebAppMain$3 run
 INFO: Jenkins is fully up and running
 ```
-
 
 

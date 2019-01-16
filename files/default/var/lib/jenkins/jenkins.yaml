@@ -12,12 +12,18 @@ plugins:
   - id: "default"
     url: "https://updates.jenkins.io/update-center.json"
 jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
   authorizationStrategy:
     loggedInUsersCanDoAnything:
       allowAnonymousRead: false
-  disableRememberMe: true
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
   mode: NORMAL
-  numExecutors: 10
+  numExecutors: 2
   primaryView:
     all:
       name: "all"

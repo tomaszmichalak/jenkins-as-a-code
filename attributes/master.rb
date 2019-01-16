@@ -1,13 +1,7 @@
 default['jenkins']['master'].tap do |master|
-  # install
-  # master['install_method'] = 'war'
-  # master['version'] = '2.150.1'
-
   master['install_method'] = 'package'
-  # In most cases latest LTS version is a good choice, but feel free to set a
-  # specific version here
-  #
-  # master['version'] = nil
+  # jenkins version
+  # master['version'] =
   master['channel'] = 'stable'
   master['jmx_port'] = '18080'
   master['jmx_ip'] = node['ipaddress']

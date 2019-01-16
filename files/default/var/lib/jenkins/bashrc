@@ -7,4 +7,4 @@ fi
 
 # User specific aliases and functions
 
-export CASC_JENKINS_CONFIG="file:///var/lib/jenkins/jenkins.yml"
+

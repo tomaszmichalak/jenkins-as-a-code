@@ -4,7 +4,7 @@ include_recipe 'jenkins::master'
 # It has to be included after jenkins::master
 edit_resource!(:template, '/etc/sysconfig/jenkins') do
   source 'jenkins-config-rhel.erb'
-  cookbook 'dougclub-jenkins'
+  cookbook 'acme-jenkins'
 end
 
 # -----------------------------------------------------------------------------
@@ -14,6 +14,18 @@ user 'jenkins' do
   shell '/bin/bash'
 
   action :modify
+end
+
+# -----------------------------------------------------------------------------
+# Dot files
+# -----------------------------------------------------------------------------
+%w(bashrc bash_profile).each do |file|
+  cookbook_file "#{node['jenkins']['master']['home']}/.#{file}" do
+    owner node['jenkins']['master']['user']
+    group node['jenkins']['master']['group']
+    mode  '0644'
+    source "var/lib/jenkins/#{file}"
+  end
 end
 
 # -----------------------------------------------------------------------------
